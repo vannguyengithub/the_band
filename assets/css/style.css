@@ -1,0 +1,338 @@
+/* Reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+html{
+    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; hành vi khi cuộn  */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-while{
+    color: #fff !important; 
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+#main{
+
+}
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    /* overflow: hidden; */
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style: none;
+} 
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: block;
+    /* mặt định của thẻ a là inline nên nó sẽ không hiện hết khi hover dc vì vậy phải thểm inline-block  */
+}
+
+#nav > li:hover > a,
+#nav .subnav > li:hover a{
+    /* như vầy nó chỉ ảnh hưởng cấp 1 thui  */
+    color: #000;
+    background-color: #ccc;
+}
+.nav-arrow-down{
+    font-size: 14px;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    display: none; 
+    /* ẩn đi  */
+    position: absolute; 
+    /* nó lấy góc tọa độ của cha nên nó sẽ đúng vị trí  */
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a{
+    color: #000;
+    line-height: 38px;
+    padding: 0 12px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#header .search-btn:hover{
+    background-color: rgb(223, 43, 43);
+    cursor: pointer;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#slider{
+    position: relative;
+   margin-top: 46px;
+   padding-top: 50%; 
+   /* padding-top: 50%; quan trọng nó bằng nữa  kích thước chiều ngang */
+   background: url(../img/slider/slider1.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 48px;
+    color: #fff;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* có nhiều cách  */
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+
+#content{
+
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 0px 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .about-text{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.6;
+}
+#content .section-heading,
+#content .section-sub-heading{
+    text-align: center;
+}
+
+#content .members-list{
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#content .member-item{
+    width: calc(100% / 3);
+    /* width: 33.3333%; */
+    text-align: center;
+}
+#content .member-name{
+    font-style: 15px;
+    text-align: center;
+}
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+/* tour section */
+.tour-section{
+    background-color: #000;
+}
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    color: #757575;
+}
+.tickets-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quantity{
+    float: right;
+    background: #000;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* place */
+.places-list{
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    /* margin-left: -8px;
+    margin-right: -8px;
+    nó quan trọng vì ở dưới ta cho cách 8px rồi 2 viền bên sẽ bị cách theo ta cần làm như vầy 
+    */
+    padding-bottom: 48px;
+}
+.place-item{
+    width: calc(100% / 3);
+    padding: 0 8px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background: #fff;
+}
+.place-heading{
+    font-size: 15px;
+    /* heading nó không nhận thuột tính chung dc nên phải font-size riêng  */
+}
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+    /* line-height: 1.4;   tiếng anh
+    line-height: 1.6;   tiếng việt  */
+}
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+/* contact form  */
+.contact-content{
+    margin-top: 48px ;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*= 'ti-'] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+
+}
+
+/* map */
+.map-section img {
+    width: 100%;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+.socials-list{
+    font-size: 24px;
+}
+.socials-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.socials-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+.copyright{
+    color: rgba(0, 0, 0, 0.6);
+}
+.copyright a{
+    color: rgba(0, 0, 0, 0.6);
+}
